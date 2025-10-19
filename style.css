@@ -1,0 +1,257 @@
+/* ==============================
+   ESTILOS GENERALES
+================================= */
+:root {
+  --naranja: #ff6b1a;
+  --rojo: #d84315;
+  --gris: #f8f8f8;
+  --texto: #222;
+  --blanco: #fff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background-color: var(--blanco);
+  color: var(--texto);
+  line-height: 1.6;
+}
+
+/* ==============================
+   ENCABEZADO
+================================= */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--rojo);
+  color: var(--blanco);
+  padding: 14px 8%;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo img {
+  height: 56px;
+  width: auto;
+}
+
+.logo h1 {
+  font-size: 1.6rem;
+  margin-bottom: 2px;
+}
+
+.logo p {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.nav a {
+  color: var(--blanco);
+  text-decoration: none;
+  margin-left: 18px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover,
+.nav .active {
+  color: var(--naranja);
+}
+
+/* ==============================
+   HERO / PORTADA
+================================= */
+.hero {
+  background: url("images/arturo-banner.jpg") no-repeat center center/cover;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--blanco);
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-texto {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+}
+
+.hero-texto h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero-texto h3 {
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.hero-texto p {
+  margin-bottom: 25px;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--naranja);
+  color: var(--blanco);
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background: #ff8a3d;
+  transform: translateY(-2px);
+}
+
+/* ==============================
+   SECCIÓN: QUIÉN SOY
+================================= */
+.about-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 10%;
+  background: var(--blanco);
+  gap: 40px;
+  border-bottom: 4px solid var(--naranja);
+}
+
+.about-text {
+  flex: 1 1 480px;
+  line-height: 1.7;
+}
+
+.about-text h2 {
+  color: var(--naranja);
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.about-text h3 {
+  color: var(--rojo);
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  margin-bottom: 18px;
+  font-size: 1.05rem;
+}
+
+.about-text .btn {
+  margin-top: 10px;
+}
+
+.about-img {
+  flex: 1 1 350px;
+  display: flex;
+  justify-content: center;
+}
+
+.about-img img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border: 3px solid var(--naranja);
+}
+
+@media (max-width: 900px) {
+  .about-section {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .about-img img {
+    max-width: 300px;
+  }
+}
+
+/* ==============================
+   SECCIÓN PROPUESTAS
+================================= */
+.propuestas {
+  background: var(--gris);
+  text-align: center;
+  padding: 60px 10%;
+}
+
+.propuestas h2 {
+  color: var(--rojo);
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+.tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.tarjeta {
+  background: var(--blanco);
+  padding: 24px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.tarjeta:hover {
+  transform: translateY(-6px);
+}
+
+/* ==============================
+   FRASE CENTRAL
+================================= */
+.frase {
+  text-align: center;
+  padding: 60px 10%;
+  font-style: italic;
+  background: var(--naranja);
+  color: var(--blanco);
+}
+
+.frase span {
+  display: block;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+/* ==============================
+   PIE DE PÁGINA
+================================= */
+.footer {
+  text-align: center;
+  padding: 30px 10%;
+  background: var(--rojo);
+  color: var(--blanco);
+}
+
+.footer .social a {
+  color: var(--naranja);
+  font-weight: 600;
+  text-decoration: none;
+}
