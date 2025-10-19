@@ -250,6 +250,137 @@ body {
   color: var(--blanco);
 }
 
+/* ==============================
+   CONÓCEME / PERFIL
+================================= */
+
+.conoceme-hero {
+  background: url("images/arturo-banner.jpg") no-repeat center center/cover;
+  height: 40vh;
+}
+
+.perfil {
+  padding: 60px 10%;
+  background: #fff;
+  color: #222;
+}
+
+.perfil-contenido {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.perfil-texto {
+  flex: 1 1 500px;
+}
+
+.perfil-texto h2 {
+  color: #d84315;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.perfil-texto p {
+  margin-bottom: 18px;
+  font-size: 1.05rem;
+}
+
+.perfil-img {
+  flex: 1 1 350px;
+  display: flex;
+  justify-content: center;
+}
+
+.perfil-img img {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border: 3px solid #ff6b1a;
+}
+
+.valores {
+  background: #f8f8f8;
+  padding: 60px 10%;
+  text-align: center;
+}
+
+.valores h2 {
+  color: #d84315;
+  margin-bottom: 25px;
+}
+
+.valores ul {
+  list-style: none;
+  padding: 0;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.valores li {
+  margin-bottom: 12px;
+  padding-left: 25px;
+  position: relative;
+}
+
+.valores li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #ff6b1a;
+  font-weight: bold;
+}
+
+.vanguardia {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 60px 10%;
+  background: linear-gradient(90deg, #ff6b1a, #d84315);
+  color: #fff;
+}
+
+.vanguardia-texto {
+  flex: 1 1 480px;
+}
+
+.vanguardia-texto h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.vanguardia-texto p {
+  margin-bottom: 16px;
+}
+
+.vanguardia-img {
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.vanguardia-img img {
+  width: 100%;
+  max-width: 220px;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.4));
+}
+
+@media (max-width: 900px) {
+  .perfil-contenido, .vanguardia {
+    flex-direction: column;
+    text-align: center;
+  }
+  .vanguardia-img img {
+    max-width: 160px;
+  }
+}
+
 .footer .social a {
   color: var(--naranja);
   font-weight: 600;
